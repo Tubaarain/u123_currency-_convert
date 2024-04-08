@@ -41,9 +41,10 @@ const  currency : any ={
 
  let fromAmount = currency [user_amswer.from]
  let toAmount =  currency [user_amswer.to]
-
  let amount = user_amswer.amount
-
- console.log (fromAmount)
- console.log (toAmount)
- console.log(amount)
+ let baseAmount = amount / fromAmount // USD BASSE CURRENCY // 4
+let convertedAmount = baseAmount * toAmount
+console.log (convertedAmount);
+ console.log (fromAmount);
+ console.log (toAmount);
+ console.log(amount);
