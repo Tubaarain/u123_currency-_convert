@@ -1,8 +1,9 @@
-
+#! /usr/bin/env node
+import { Console } from "console";
 import inquirer from "inquirer"
 
 const  currency : any ={
-    USD: 1,    
+    USD: 1,    //Base currency
     EUR: 0.91,
     GBP: 0.76,
     INR: 74.57,
@@ -44,7 +45,9 @@ const  currency : any ={
  let amount = user_amswer.amount
  let baseAmount = amount / fromAmount // USD BASSE CURRENCY // 4
 let convertedAmount = baseAmount * toAmount
-console.log (convertedAmount);
- console.log (fromAmount);
- console.log (toAmount);
- console.log(amount);
+// console.log (convertedAmount);
+let newconvertedAmount = convertedAmount.toFixed(2);
+console.log(newconvertedAmount)
+//  console.log (fromAmount);
+//   console.log (toAmount);
+//  console.log(amount);
